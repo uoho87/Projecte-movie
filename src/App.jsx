@@ -1,25 +1,26 @@
 import "./App.css";
-import { MoviesGrid } from "./pages/MoviesGrid";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Movies from "./pages/MoviesGrid.jsx";
+import Movie from "./pages/MovieDetail.jsx";
+import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    
-      <div>
-        <Router>
+    <BrowserRouter>
+      <main>
         <header>
-          <Link to="/">Movies</Link>
-
+          <nav>
+            <Link to="/">Movies</Link>
+          </nav>
         </header>
-        <main>
+        <section>
           <Routes>
-            <Route exact path="/"/>{MoviesGrid}<Route/>
-            <Route path="/movie/:movieId"/><Route/>
+            <Route path="/" element={<Navigate to="/movies" />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/movie/:movie.id" element={<Movie />} />
           </Routes>
-        </main>
-        </Router>
-      </div>
-    
+        </section>
+      </main>
+    </BrowserRouter>
   );
 }
 
