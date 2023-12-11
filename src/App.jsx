@@ -8,7 +8,7 @@ function App() {
       <div>
         <Router>
         <header>
-          <Link to="/">Home</Link>
+          <Link to="/">Movies</Link>
 
         </header>
         <main>
