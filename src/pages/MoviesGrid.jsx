@@ -10,7 +10,7 @@ export function MoviesGrid() {
    
    
    useEffect(() => {
-     get("/discover/movie" + "?api_key=ea370ff11e967f7500ea0c91fdae24e9")
+     get(`/discover/movie?api_key=ea370ff11e967f7500ea0c91fdae24e9`)
         .then(data => {
          setMovies(data.results);
       });

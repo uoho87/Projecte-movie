@@ -1,6 +1,6 @@
 import "./App.css";
-import Movies from "./pages/MoviesGrid.jsx";
-import Movie from "./pages/MovieDetail.jsx";
+import {Movies} from "../pages/MoviesGrid.jsx";
+import {Movie} from "../pages/MovieDetail.jsx";
 import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
